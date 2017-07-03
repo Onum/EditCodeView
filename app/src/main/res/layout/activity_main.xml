@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.bigbangbutton.editcodeview.EditCodeView
+            android:id="@+id/edit_code_1"
+            android:layout_width="200dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            app:underlineReductionScale="0.3"
+            app:underlineStroke="5dp" />
+
+        <com.bigbangbutton.editcodeview.EditCodeView
+            android:layout_width="300dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            app:codeHiddenMask="!"
+            app:codeHiddenMode="true"
+            app:underlineReductionScale="0.8" />
+
+        <com.bigbangbutton.editcodeview.EditCodeView
+            android:layout_width="200dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            app:codeLength="6" />
+
+        <com.bigbangbutton.editcodeview.EditCodeView
+            android:layout_width="200dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:paddingBottom="10dp"
+            app:underlineCursorEnabled="true"
+            app:underlineReductionScale="0.1" />
+
+        <com.bigbangbutton.editcodeview.EditCodeView
+            android:layout_width="300dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            app:codeHiddenMode="true"
+            app:underlineCursorEnabled="true"
+            app:underlineStroke="10dp" />
+    </LinearLayout>
+</ScrollView>

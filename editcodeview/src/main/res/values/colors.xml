@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_main_color">#000000</color>
+    <color name="underline_base_color">#c0c1c4</color>
+    <color name="underline_filled_color">#c8182d</color>
+    <color name="underline_cursor_color">#c8182d</color>
+    <color name="underline_selected_color">#000000</color>
+</resources>

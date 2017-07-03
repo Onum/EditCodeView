@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EditCodeView">
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="codeLength" format="integer" />
+        <attr name="codeHiddenMode" format="boolean" />
+        <attr name="codeHiddenMask" format="string" />
+        <attr name="underlineStroke" format="dimension" />
+        <attr name="underlineReductionScale" format="float" />
+        <attr name="underlineFilledColor" format="color" />
+        <attr name="underlineSelectedColor" format="color" />
+        <attr name="underlineBaseColor" format="color" />
+        <attr name="underlineCursorColor" format="color" />
+        <attr name="underlineCursorEnabled" format="boolean" />
+        <attr name="fontStyle">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+            <enum name="bold_italic" value="3" />
+        </attr>
+    </declare-styleable>
+</resources>
