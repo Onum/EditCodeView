@@ -10,7 +10,7 @@
         android:orientation="vertical">
 
         <com.bigbangbutton.editcodeview.EditCodeView
-            android:id="@+id/edit_code_1"
+            android:id="@+id/edit_code"
             android:layout_width="200dp"
             android:layout_height="56dp"
             android:layout_gravity="center"

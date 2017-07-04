@@ -1,6 +1,6 @@
 package com.bigbangbutton.editcodeview;
 
-interface EditCodeListener {
+public interface EditCodeListener {
     void onCodeReady(String code);
 }
 
