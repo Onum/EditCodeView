@@ -2,10 +2,12 @@ package com.bigbangbutton.sample;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.WindowManager;
 
 import com.bigbangbutton.editcodeview.EditCodeListener;
 import com.bigbangbutton.editcodeview.EditCodeView;
+import com.bigbangbutton.editcodeview.EditCodeWatcher;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,6 +24,16 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        editCodeView.setEditCodeWatcher(new EditCodeWatcher() {
+            @Override
+            public void onCodeChanged(String code) {
+                Log.e("CodeWatcher", " changed : " + code);
+            }
+        });
+
+        editCodeView.requestFocus();
+        editCodeView.setCode("1132");
 
     }
 }

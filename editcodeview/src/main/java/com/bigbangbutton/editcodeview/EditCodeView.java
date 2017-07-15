@@ -35,6 +35,7 @@ public class EditCodeView extends View
     private InputMethodManager inputmethodmanager;
     private EditCodeInputConnection editCodeInputConnection;
     private EditCodeListener editCodeListener;
+    private EditCodeWatcher editCodeWatcher;
     private Editable editable;
 
     private Paint textPaint;
@@ -314,7 +315,7 @@ public class EditCodeView extends View
 
     public void setCode(@NonNull String code) {
         code = code.replaceAll(DEFAULT_REGEX, "");
-        editCodeInputConnection.setComposingText(code, 1);
+        editCodeInputConnection.setComposingText(code, 0);
     }
 
     public void clearCode() {
@@ -376,6 +377,10 @@ public class EditCodeView extends View
         invalidate();
     }
 
+    public void setEditCodeWatcher(EditCodeWatcher editCodeWatcher) {
+        this.editCodeWatcher = editCodeWatcher;
+    }
+
     public void showKeyboard() {
         inputmethodmanager.showSoftInput(this, 0);
     }
@@ -429,7 +434,9 @@ public class EditCodeView extends View
         @Override
         public void afterTextChanged(Editable s) {
             invalidate();
-
+            if(editCodeWatcher != null) {
+                editCodeWatcher.onCodeChanged(s.toString());
+            }
             if (editable.length() == codeLength) {
                 if (editCodeListener != null) {
                     editCodeListener.onCodeReady(editable.toString());
