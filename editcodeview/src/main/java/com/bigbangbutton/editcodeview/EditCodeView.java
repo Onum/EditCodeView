@@ -381,6 +381,10 @@ public class EditCodeView extends View
         this.editCodeWatcher = editCodeWatcher;
     }
 
+    public int getCodeLength() {
+        return codeLength;
+    }
+
     public void showKeyboard() {
         inputmethodmanager.showSoftInput(this, 0);
     }
