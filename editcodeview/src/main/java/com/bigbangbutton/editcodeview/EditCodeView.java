@@ -315,11 +315,14 @@ public class EditCodeView extends View
 
     public void setCode(@NonNull String code) {
         code = code.replaceAll(DEFAULT_REGEX, "");
-        editCodeInputConnection.setComposingText(code, 0);
+        editCodeInputConnection.setComposingText(code, 1);
+        editCodeInputConnection.finishComposingText();
     }
 
     public void clearCode() {
+        editCodeInputConnection.setComposingRegion(0, codeLength);
         editCodeInputConnection.setComposingText("", 0);
+        editCodeInputConnection.finishComposingText();
     }
 
     public String getCode() {

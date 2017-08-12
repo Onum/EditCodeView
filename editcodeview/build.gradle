@@ -8,8 +8,8 @@ android {
     defaultConfig {
         minSdkVersion 17
         targetSdkVersion 25
-        versionCode 4
-        versionName "1.0.3"
+        versionCode 5
+        versionName "1.0.4"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -44,7 +44,7 @@ ext {
     siteUrl = 'https://github.com/Onum/EditCodeView'
     gitUrl = 'https://github.com/Onum/EditCodeView.git'
 
-    libraryVersion = "1.0.3"
+    libraryVersion = "1.0.4"
     organization = ""
     developerId = 'onum'
     developerName = 'Aleksandr Grizhinku'
