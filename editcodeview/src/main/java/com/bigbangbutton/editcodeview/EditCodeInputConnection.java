@@ -25,11 +25,14 @@ class EditCodeInputConnection extends BaseInputConnection {
 
     @Override
     public boolean sendKeyEvent(KeyEvent event) {
-        if (event.getAction() == KeyEvent.ACTION_DOWN
-                && event.getKeyCode() >= KeyEvent.KEYCODE_0
-                && event.getKeyCode() <= KeyEvent.KEYCODE_9) {
-            char c = event.getKeyCharacterMap().getNumber(event.getKeyCode());
-            commitText(String.valueOf(c), 1);
+        if (event.getAction() == KeyEvent.ACTION_DOWN) {
+            if (event.getKeyCode() >= KeyEvent.KEYCODE_0
+                    && event.getKeyCode() <= KeyEvent.KEYCODE_9) {
+                char c = event.getKeyCharacterMap().getNumber(event.getKeyCode());
+                commitText(String.valueOf(c), 1);
+            } else if (event.getKeyCode() == KeyEvent.KEYCODE_DEL) {
+                deleteSurroundingText(1, 0);
+            }
         }
         return super.sendKeyEvent(event);
     }
