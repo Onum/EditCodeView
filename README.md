@@ -14,7 +14,7 @@ MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org
 ## Gradle
 
 ```gradle
-compile 'com.bigbangbutton:editcodeview:1.0.4'
+compile 'com.bigbangbutton:editcodeview:1.0.5'
 ```
 # Customized attributes
 
