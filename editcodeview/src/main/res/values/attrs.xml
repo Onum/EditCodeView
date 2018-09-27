@@ -13,7 +13,7 @@
         <attr name="underlineBaseColor" format="color" />
         <attr name="underlineCursorColor" format="color" />
         <attr name="underlineCursorEnabled" format="boolean" />
-        <attr name="fontStyle">
+        <attr name="font_style">
             <enum name="normal" value="0" />
             <enum name="bold" value="1" />
             <enum name="italic" value="2" />
