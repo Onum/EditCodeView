@@ -32,7 +32,7 @@ underlineSelectedColor | color
 underlineBaseColor | color
 underlineCursorColor | color
 underlineCursorEnabled | boolean
-fontStyle | enum
+font_style | enum
 
 # How to get code
 ``` java

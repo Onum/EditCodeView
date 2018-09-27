@@ -150,7 +150,7 @@ public class EditCodeView extends View
                 R.styleable.EditCodeView_textColor, textColor);
 
         fontStyle = attributes.getInt(
-                R.styleable.EditCodeView_fontStyle, fontStyle);
+                R.styleable.EditCodeView_font_style, fontStyle);
 
         codeLength = attributes.getInt(
                 R.styleable.EditCodeView_codeLength, DEFAULT_CODE_LENGTH);
