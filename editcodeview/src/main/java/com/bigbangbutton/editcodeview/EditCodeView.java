@@ -62,6 +62,7 @@ public class EditCodeView extends View
     private boolean codeHiddenMode;
     private boolean isSelected;
     private String codeHiddenMask;
+    private Typeface typeface;
     private Rect textBounds = new Rect();
 
     private Runnable cursorAnimation = new Runnable() {
@@ -180,7 +181,11 @@ public class EditCodeView extends View
         textPaint = new Paint();
         textPaint.setColor(textColor);
         textPaint.setTextSize(textSize);
-        textPaint.setTypeface(Typeface.create(Typeface.DEFAULT, fontStyle));
+        if(typeface == null) {
+            textPaint.setTypeface(Typeface.create(Typeface.DEFAULT, fontStyle));
+        } else {
+            textPaint.setTypeface(typeface);
+        }
         textPaint.setAntiAlias(true);
 
         underlinePaint = new Paint();
@@ -222,6 +227,7 @@ public class EditCodeView extends View
 
     @Override
     protected void onDraw(Canvas canvas) {
+        initPaints();
         drawUnderline(canvas);
         drawText(canvas);
     }
@@ -364,6 +370,11 @@ public class EditCodeView extends View
 
     public void setTextColor(@ColorInt int colorId) {
         textColor = colorId;
+        invalidate();
+    }
+
+    public void setTypeface(@NonNull Typeface typeface) {
+        this.typeface = typeface;
         invalidate();
     }
 
